@@ -1,0 +1,66 @@
+package com.example.apiapp.repository
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import com.example.apiapp.R
+import com.example.apiapp.model.NetCat
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+
+    // Read the docs with detailed instructions to get your API key and endpoint!
+    // https://docs.thecatapi.com/
+
+    // public static fields in a companion object because im a horrible person
+    companion object {
+        // the server url endpoint
+        const val serverUrl = "https://api.thecatapi.com/v1/"
+        // this is where you declare your api key
+        const val apiKey = "1ef90501-04e0-4592-9831-eb3e25d439b1"
+    }
+
+    private lateinit var viewModel: MainViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // setting up viewModel
+        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+
+        // observing the stuff we are interested about.
+        // any change observed will run the corresponding method
+        viewModel.bunchOfCats.observe(this, Observer { onResult(it) })
+        viewModel.errorMessage.observe(this, Observer { onError(it) })
+
+        // click listener so you can perform the API call manually
+
+    }
+
+    /**
+     * Method triggered when we observe a change in MainViewModel.bunchOfCats MutableLiveData
+     * @param bunchOfCats An updated list of cats we got from the API
+     */
+    private fun onResult(bunchOfCats: List<NetCat>) {
+
+        // Not doing anything yet with this list except a toast
+        Toast.makeText(this@MainActivity, "Got ${bunchOfCats.size} cats", Toast.LENGTH_SHORT).show()
+    }
+
+    /**
+     * Method triggered when we observe a change in MainViewModel.errorMessage MutableLiveData
+     * @param error Error message describing what went wrong
+     */
+    private fun onError(error: String) {
+        // a simple toast in case things went wrong
+        error.let {
+            if (!it.isBlank()) {
+                Toast.makeText(this@MainActivity, error, Toast.LENGTH_SHORT).show()
+            }
+
+        }
+    }
+
+}

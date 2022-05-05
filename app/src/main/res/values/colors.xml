@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="black">#000000</color>
+    <color name="darklatesgray">#1e2e46</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="blue">#2641F8</color>
+    <color name="blue_lavender">#d6e7ef</color>
+    <color name="sky_blue">#6bceec</color>
+    <color name="orange_linen">#fbeee5</color>
+    <color name="gray">#F4F4F4</color>
+    <color name="grey">#808080</color>
+    <color name="darkPink">#c49ca4</color>
+    <color name="rosy_pink">#e7557c</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="coral_orange">#ec894a</color>
+    <color name="red">#F6402C</color>
+    <color name="crimson_red">#d80027</color>
+    <color name="dark_orchid">#9846d6</color>
+    <color name="pink">#EB1460</color>
+    <color name="light_gray">#cdd4dc</color>
+    <color name="light_pink">#f4a9bc</color>
+    <color name="purple">#9C1AB1</color>
+    <color name="blue_boro">#cbddeb</color>
+    <color name="deep_purple">#6633B9</color>
+    <color name="indigo">#3D4DB7</color>
+    <color name="sea_blue">#1093F5</color>
+    <color name="misty_pink">#fee3e8</color>
+    <color name="sierra_blue">#9bbcf0</color>
+    <color name="lavender">#e6ddf0</color>
+    <color name="honeydew">#e3f5e7</color>
+    <color name="light_blue">#00A6F6</color>
+    <color name="cyan">#00BBD5</color>
+    <color name="teal">#009687</color>
+    <color name="green">#46AF4A</color>
+    <color name="light_green">#9acd32</color>
+    <color name="lime">#CCDD1E</color>
+    <color name="amber">#FFC100</color>
+    <color name="orange">#FF9800</color>
+    <color name="deep_orange">#FF5505</color>
+    <color name="brown">#7A5547</color>
+    <color name="blue_grey">#5E7C8B</color>
+    <color name="white">#ffffff</color>
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="inactive_dots">#83878b</color>
+    <color name="darklatesgreen">#23695b</color>
+    <color name="brown_peru">#c28e60</color>
+
+    <array name="gradient">
+        <item>#b5fff6</item>
+        <item>#00ffdf</item>
+        <item>#00bfa4</item>
+        <item>#007c6a</item>
+    </array>
+</resources>

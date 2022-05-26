@@ -7,13 +7,20 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 open class Repository(
-    baseUrl: String,
     isDebugEnabled: Boolean,
-    apiKey: String
 ) {
 
     private val apiKeyHeader: String = "x-api-key"
     val retrofit: Retrofit
+
+    // public static fields in a companion object because im a horrible person
+    companion object {
+        // the server url endpoint
+       private const val baseUrl = "https://api.thecatapi.com/v1/"
+        // this is where you declare your api key
+       private const val apiKey = "1ef90501-04e0-4592-9831-eb3e25d439b1"
+    }
+
 
     init {
 
